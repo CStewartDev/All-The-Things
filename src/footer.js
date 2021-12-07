@@ -1,4 +1,4 @@
-import { createHtmlElement } from "./createElHelper";
+import { createHtmlElement } from "./createHTMLElement"
 import gh from "./images/GitHub.png";
 
 const render = () => {
