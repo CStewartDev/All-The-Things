@@ -1,17 +1,17 @@
 import './styles.css';
-import { createHtmlElement } from './createHTMLElement';
 import { renderFooter } from './footer';
-import { createTodo } from './todo';
+import { task } from './todoDOM';
+
 
 const todoList = document.querySelector('.todoList');
-console.log(todoList)
 
-
-let todo = createTodo("This was produced by JS",2,3,4,5)
-const boop = createHtmlElement('li',null,['boop'],todo.title);
-
-todoList.appendChild(boop)
-
-console.table(todo)
-
+todoList.appendChild(task)
 document.body.appendChild(renderFooter())
+
+// <li class="task priority"> 
+// <div class="task-title">Todo 1</div>
+// <div class="task-right">
+//     <div class="due-date">No date</div>
+//     <div class="delete">-X-</div>
+// </div>
+// </li>

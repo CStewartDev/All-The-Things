@@ -9,7 +9,7 @@ const render = () => {
     const img = new Image();
     img.src = gh;
     link.append(img)
-    footer.append(para,link);
+    footer.append(link, para);
     return footer;
 }
 

@@ -14,22 +14,47 @@
         <Section>
             <ul id= "Schedule">
                 <li>All Items</li>
-                <li>Upcoming</li>
                 <li>Today<span id="Schedule-Sel"> *</span></li>
+                <li>Upcoming</li>
                 <li>Past Due</li>
             </ul>
-            <ul id= "Categories">
-                <li>Bananas</li>
-                <li><Button>+</Button>Add Category</li>
-            </ul>
+            <div id="Categories">
+                <div class="add-btn">
+                    Categories
+                    <button id="add-category">
+                        <svg width="13" height="13">
+                            <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.0.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" 
+                            fill="currentColor" fill-rule="evenodd">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <ul>
+                    <li class="category">Bananas</li>
+                    <li class="category">Asparagus</li>
+                </ul>
+                
+            </div>
         </section>
     </aside>
     <main>
         <section id="Todos">
-            <div>Today's THINGS</div>
+            <div id="list-title">Today's THINGS</div>
             <ul class="todoList">
-                <li>Todo 1</li>
-                <li>Todo 2</li>
+                <li class="task priority"> 
+                    <div class="task-title">Todo 1</div>
+                    <div class="task-right">
+                        <div class="due-date">No date</div>
+                        <div class="delete">-X-</div>
+                    </div>
+                </li>
+                <li class="task"> 
+                    <div class="task-title">Todo 2</div>
+                    <div class="task-right">
+                        <div class="due-date">12/08/2021</div>
+                        <div class="delete">-X-</div>
+                    </div>
+                </li>
             </ul>
 
         </section>
@@ -38,3 +63,4 @@
     
 </body>
 </html>
+

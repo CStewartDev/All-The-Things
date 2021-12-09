@@ -1,30 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,200&display=swap');
-
+/* Resets */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* basic styles for page */
 html{
     height: 100%;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Nunito', sans-serif;
 }
 :root {
     /* Color Pallete */
-    --light-white: #EFF1ED;
-    --light-green: #bcbd8b;
-    --green: #717744;
-    --dark-green:#373D20;
-    --brown: #766153;
+    --offwhite: #EFF1ED;
+    --white: #ffffff;
+    --green: #82C445;
+    --dark-green:#3c5a14;
+    --black: #222222;
+    --priority: #7a0c00;
+    --hover:#adaead;
 }
 
 body {
     min-height: 100%;
-    background-color: var(--light-white);
+    background-color: var(--white);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 2fr 15fr 1fr;
+    grid-template-rows: auto 10fr auto;
     grid-template-areas:
     "header header header header header"
     "sidebar main main main main"
@@ -35,37 +38,143 @@ li {
     list-style: none;
 }
 
+/* Header */
+
 header {
     grid-area: header;
-    background-color: var(--light-green);
-    font-size: 2em;
+    background-color: var(--green);
+    font-size: 1em;
     text-align: center;
     font-weight: 700;
+    color: var(--offwhite);
 }
 
-main {
-    grid-area: main;
-    border: 1px solid tomato;
-}
+/* Sidebar */
 
 aside {
     grid-area: sidebar;
-    background-color: var(--brown);
-    padding-left: 1rem;
+    background-color: var(--offwhite);
+    padding: 2rem .5rem 0 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
-.boop {
-    background-color: var(--dark-green);
-    color: var(--light-green)
+#Schedule li {
+    padding: .5em .5em;
+    cursor: pointer;
 }
+
+#Schedule li:hover{
+    background-color: var(--hover);
+    border-radius: 10px;  
+}
+
+#Categories {
+    padding-top: 1em;
+}
+
+#Categories p{
+    font-weight: 700;
+}
+
+#Categories ul {
+    padding-top: .5em;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.category {
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.category:hover {
+    background-color: var(--hover);
+    border-radius: 10px;
+}
+
+#add-category {
+    border:none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--offwhite);
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+#add-category:hover {
+    background-color: var(--hover);
+}
+
+/* main */
+
+main {
+    grid-area: main;
+    background-color: var(--white);
+    padding: 2.5em 4em 1em 2.5em;
+}
+
+#list-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding-left: .5em;
+    font-size: 1.25em;
+    border-bottom: 1px solid var(--offwhite);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.task:hover .delete {
+    color: inherit;
+}
+
+.task-title {
+    font-weight: 700;
+}
+
+.task-right{
+    display: flex;
+}
+
+.task-right div {
+    padding-right: 3em;
+}
+
+.delete {
+    color: var(--white);
+}
+
+.priority {
+    color: var(--priority);
+}
+
+/* footer */
 
 footer {
     grid-area: footer;
-    background-color: black;
+    background-color: var(--green);
     color: white;
-    /* grid-row-start: 4;
-    grid-row-end: 5; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+footer a img {
+    height:20px;
+    padding: 3px .5em 0 0;
 }
