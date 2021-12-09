@@ -1,15 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,200&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html{
+    height: 100%;
     font-size: 14px;
+    font-family: 'Nunito', sans-serif;
+}
+:root {
+    /* Color Pallete */
+    --light-white: #EFF1ED;
+    --light-green: #bcbd8b;
+    --green: #717744;
+    --dark-green:#373D20;
+    --brown: #766153;
 }
 
-.boop-red {
-    color: red;
+body {
+    min-height: 100%;
+    background-color: var(--light-white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 2fr 15fr 1fr;
+    grid-template-areas:
+    "header header header header header"
+    "sidebar main main main main"
+    "footer footer footer footer footer";
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--light-green);
+    font-size: 2em;
+    text-align: center;
+    font-weight: 700;
+}
+
+main {
+    grid-area: main;
+    border: 1px solid tomato;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: var(--brown);
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.boop {
+    background-color: var(--dark-green);
+    color: var(--light-green)
 }
 
 footer {
+    grid-area: footer;
     background-color: black;
     color: white;
+    /* grid-row-start: 4;
+    grid-row-end: 5; */
 }

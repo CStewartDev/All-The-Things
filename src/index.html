@@ -7,6 +7,34 @@
     <title> <%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <h1>ALL THE THINGS!!!</h1>
+    <header>
+        <h1>ALL THE THINGS!!!</h1>
+    </header>
+    <aside>
+        <Section>
+            <ul id= "Schedule">
+                <li>All Items</li>
+                <li>Upcoming</li>
+                <li>Today<span id="Schedule-Sel"> *</span></li>
+                <li>Past Due</li>
+            </ul>
+            <ul id= "Categories">
+                <li>Bananas</li>
+                <li><Button>+</Button>Add Category</li>
+            </ul>
+        </section>
+    </aside>
+    <main>
+        <section id="Todos">
+            <div>Today's THINGS</div>
+            <ul class="todoList">
+                <li>Todo 1</li>
+                <li>Todo 2</li>
+            </ul>
+
+        </section>
+        
+    </main>
+    
 </body>
 </html>

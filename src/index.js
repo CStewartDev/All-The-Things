@@ -3,11 +3,15 @@ import { createHtmlElement } from './createHTMLElement';
 import { renderFooter } from './footer';
 import { createTodo } from './todo';
 
-const content = createHtmlElement('div',"content",null,null);
-const boop = createHtmlElement('p',null,['boop-red'],"I'm a boop");
+const todoList = document.querySelector('.todoList');
+console.log(todoList)
 
-let todo = createTodo(1,2,3,4,5)
+
+let todo = createTodo("This was produced by JS",2,3,4,5)
+const boop = createHtmlElement('li',null,['boop'],todo.title);
+
+todoList.appendChild(boop)
+
 console.table(todo)
 
-content.append(boop,renderFooter())
-document.body.appendChild(content)
+document.body.appendChild(renderFooter())
