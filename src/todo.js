@@ -1,8 +1,8 @@
-const createTodo = (title,desc,flag,due,category) => {
+const createTodo = (title,desc,priority,due,category) => {
    return {
         title,
         desc,
-        flag,
+        priority,
         due,
         category       
     }
