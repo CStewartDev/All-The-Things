@@ -13,7 +13,7 @@ Assignment
 
     5. The look of the User Interface is up to you, but it should be able to do the following:
         view all projects
-        view all todos in each project (probably just the title and duedate.. perhaps changing color for different priorities)
+        view all todos in each project (probably just the title and due date.. perhaps changing color for different priorities)
         expand a single todo to see/edit its details
         delete a todo
 
