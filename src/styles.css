@@ -19,6 +19,7 @@ html{
     --dark-green:#3c5a14;
     --black: #222222;
     --priority: #7a0c00;
+    --delete:red;
     --hover:#adaead;
 }
 
@@ -139,7 +140,12 @@ main {
 }
 
 .task:hover .delete {
-    color: inherit;
+    color: var(--delete);
+}
+
+.task:hover {
+    background-color: var(--offwhite);
+    border-radius: 15px;
 }
 
 .task-title {

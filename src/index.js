@@ -1,17 +1,20 @@
 import './styles.css';
 import { renderFooter } from './footer';
-import { task } from './todoDOM';
-
+import { createTodo } from './todo';
+import { newTask } from './todoDOM';
 
 const todoList = document.querySelector('.todoList');
 
-todoList.appendChild(task)
-document.body.appendChild(renderFooter())
+const defaultTasks = [
+    createTodo('Buy presents',"Need to buy for Mom, Sister, Son",false,"12/20/2021",""),
+    createTodo('Wrap presents',"Need to Wrap for Brother, Daughter & Dogs",true,"12/19/2021",""),
+    createTodo('Buy Food for Feast',"Need to buy steaks, taters, greenbeans",false,"12/12/21",""),
+    createTodo('CHRISTMAS!!!!',"Have a holly jolly Christmas",true,"12/25/21",""),
+]
 
-// <li class="task priority"> 
-// <div class="task-title">Todo 1</div>
-// <div class="task-right">
-//     <div class="due-date">No date</div>
-//     <div class="delete">-X-</div>
-// </div>
-// </li>
+
+
+defaultTasks.map(task=>todoList.appendChild(newTask(task)));
+
+
+document.body.appendChild(renderFooter())
