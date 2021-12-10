@@ -16,5 +16,11 @@ const defaultTasks = [
 
 defaultTasks.map(task=>todoList.appendChild(newTask(task)));
 
+let test = document.querySelectorAll('.task');
+console.log(test)
+test.forEach(t=> {
+    t.addEventListener('click',e=>(console.log(e.target)))
+})
+
 
 document.body.appendChild(renderFooter())
