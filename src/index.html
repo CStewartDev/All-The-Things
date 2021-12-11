@@ -41,7 +41,7 @@
         <section id="Todos">
             <div id="list-title">Today's THINGS</div>
             <ul class="todoList">
-                <li class="task priority"> 
+                <li class="task priority" key="boop"> 
                     <div class="task-title">Todo 1</div>
                     <div class="task-right">
                         <div class="due-date">No Due date</div>
@@ -58,9 +58,27 @@
                             </path>
                         </svg></span>Add Task
                 </button>
+                <form class = "add-task-form">
+                    <div class = "text-container-form">
+                        <label for="form-title">Title</label>
+                        <input type="text" name="form-title" id="title-form" required placeholder="e.g., Learn how to use factory functions">
+                        <label for="task-desc-form">Task Description</label>
+                        <textarea name="task-desc" id="task-desc-form" placeholder="Description"></textarea>
+                    </div>
+                        <div class="btn-container-form">
+                            <label for="date-form">Enter Date:</label>
+                            <input type="date" id="date-form">
+                            <label for="category-form"></label>
+                            <select id='category-form'>
+                                <option value=""  selected>---Categories---</option>
+                                <option value="Bananas">Bananas</option>
+                                <option value="Asparagus">Asparagus</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
-        
     </main>
     
 </body>

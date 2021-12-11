@@ -208,6 +208,77 @@ main {
     background-color: var(--green);
     border-radius: 5px;
 }
+
+.add-task-form {
+    border: 1px solid var(--offwhite);
+    padding-left: .5em;
+}
+
+/*Hide input labels visually https://css-tricks.com/html-inputs-and-labels-a-love-story/  */
+.text-container-form label{
+    border-width: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute ;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+#title-form{
+    border: none;
+    display: flex;
+    width: 100%;
+    margin: .5em 0;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+#title-form:focus-visible {
+    outline: none;
+}
+
+#task-desc-form{
+    border: none;
+    resize: none;
+    width: 100%;
+    font-size: 1.05em;
+    font-weight: 200;
+    height: 2.5em;
+}
+#task-desc-form:focus-visible {
+    outline: none;
+}
+
+#task-desc-form::placeholder{
+    color: var(--hover);
+}
+
+/* .btn-container-form {
+
+} */
+
+.btn-container-form label{
+    border-width: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute ;
+    white-space: nowrap;
+    width: 1px;
+}
+
+#date-form {
+    border: none;
+}
+
+#date-form:focus-visible{
+    outline: none;
+}
+
 /* footer */
 
 footer {
