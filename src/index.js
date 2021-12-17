@@ -1,28 +1,36 @@
 import './styles.css';
-import { renderFooter } from './footer';
+import { renderFooter } from './DOM/footer.js';
 import { createTodo } from './todo';
-import { newTask } from './todoDOM';
+import { newTask } from './DOM/todoDOM';
+import { listCategory } from './DOM/categories';
 
 const todoList = document.querySelector('.todoList');
-
-const defaultTasks = [
-    createTodo('Buy presents',"Need to buy for Mom, Sister, Son",false,"12/20/2021",""),
-    createTodo('Wrap presents',"Need to Wrap for Brother, Daughter & Dogs",true,"12/19/2021",""),
-    createTodo('Buy Food for Feast',"Need to buy steaks, taters, greenbeans",false,"12/12/21",""),
-    createTodo('CHRISTMAS!!!!',"Have a holly jolly Christmas",true,"12/25/21",""),
-]
+const sideCategoryList = document.getElementById('categories-sidebar');
 
 //Linking in local storage
 
-if(localStorage.getItem('user')== null){
-    localStorage.setItem('user',JSON.stringify(defaultTasks))
-    defaultTasks.map(task=>todoList.appendChild(newTask(task)));
+if(localStorage.getItem('ALLTHETHINGS-CATEGORY') == null){
+    const defaultCategories = ["Welcome","Work"]
+    localStorage.setItem('ALLTHETHINGS-CATEGORY', JSON.stringify(defaultCategories));
+    defaultCategories.map(category=>sideCategoryList.appendChild(listCategory(category)));
 } else {
-    let storage = JSON.parse(window.localStorage.getItem('user'));
-    storage.map(task=>todoList.appendChild(newTask(task)));
+    let storage = JSON.parse(window.localStorage.getItem('ALLTHETHINGS-CATEGORY'));
+    storage.map(category=>sideCategoryList.appendChild(listCategory(category)));
 }
 
-
+if(localStorage.getItem('ALLTHETHINGS-TASK') == null){
+    const defaultTasks = [
+        createTodo('Enter your Things title and desc test',"No need to add this unless you cant to",false,"",""),
+        createTodo('This one has Priority flagged',"",true,"",""),
+        createTodo('Just a Date here!',"",false,"12/12/22",""),
+        createTodo('Category Test',"",false,"","Welcome"),
+    ]
+    localStorage.setItem('ALLTHETHINGS-TASK',JSON.stringify(defaultTasks));
+    defaultTasks.map(task=>todoList.appendChild(newTask(task)));
+} else {
+    let storage = JSON.parse(window.localStorage.getItem('ALLTHETHINGS-TASK'));
+    storage.map(task=>todoList.appendChild(newTask(task)));
+}
 
 let test = document.querySelectorAll('.task');
 test.forEach(t=> {
@@ -34,4 +42,4 @@ test.forEach(t=> {
 })
 
 
-document.body.appendChild(renderFooter())
+document.body.appendChild(renderFooter());

@@ -1,5 +1,5 @@
-import { createHtmlElement } from "./createHTMLElement"
-import gh from "./images/GitHub.png";
+import { createHtmlElement } from "../createHTMLElement"
+import gh from "../images/GitHub.png";
 
 const render = () => {
     const footer = document.createElement('footer');
