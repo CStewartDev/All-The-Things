@@ -212,6 +212,7 @@ main {
 .add-task-form {
     border: 1px solid var(--offwhite);
     padding-left: .5em;
+    border-radius: 5px;
 }
 
 /*Hide input labels visually https://css-tricks.com/html-inputs-and-labels-a-love-story/  */
@@ -256,11 +257,7 @@ main {
     color: var(--hover);
 }
 
-/* .btn-container-form {
-
-} */
-
-.btn-container-form label{
+.data-container-form label{
     border-width: 0;
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -273,10 +270,67 @@ main {
 
 #date-form {
     border: none;
+    font-family: 'Nunito', sans-serif;
+    cursor:pointer;
+    border-radius: 5px;
+    color: var(--black);
 }
 
 #date-form:focus-visible{
     outline: none;
+}
+
+#date-form:hover{
+    background-color: var(--offwhite);
+}
+
+#category-form {
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--black);
+    width: 12em;
+    text-align: center;
+}
+
+#category-form:hover {
+    background-color: var(--offwhite);
+}
+
+.btn-container-form {
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.btn-container-form button {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    background-color: var(--offwhite);
+    font-weight: 700;
+    padding: .25em;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.btn-container-form button:nth-of-type(2):hover{
+    background-color: var(--hover);
+}
+
+#add-thing {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+#add-thing:hover {
+    background-color: var(--dark-green);
+    color: var(--offwhite);
 }
 
 /* footer */

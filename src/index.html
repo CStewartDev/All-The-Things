@@ -41,13 +41,6 @@
         <section id="Todos">
             <div id="list-title">Today's THINGS</div>
             <ul class="todoList">
-                <li class="task priority" key="boop"> 
-                    <div class="task-title">Todo 1</div>
-                    <div class="task-right">
-                        <div class="due-date">No Due date</div>
-                        <div class="delete">-X-</div>
-                    </div>
-                </li>
             </ul>
             <div class="add-task-div">
                 <button id="add-task">
@@ -56,16 +49,17 @@
                             <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.0.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" 
                                 fill="currentColor" fill-rule="evenodd">
                             </path>
-                        </svg></span>Add Task
+                        </svg></span>Add THING
                 </button>
-                <form class = "add-task-form">
-                    <div class = "text-container-form">
-                        <label for="form-title">Title</label>
-                        <input type="text" name="form-title" id="title-form" required placeholder="e.g., Learn how to use factory functions">
-                        <label for="task-desc-form">Task Description</label>
-                        <textarea name="task-desc" id="task-desc-form" placeholder="Description"></textarea>
-                    </div>
-                        <div class="btn-container-form">
+                <form >
+                    <div class = "add-task-form">
+                        <div class = "text-container-form">
+                            <label for="form-title">Title</label>
+                            <input type="text" name="form-title" id="title-form" required placeholder="e.g., Learn how to use factory functions">
+                            <label for="task-desc-form">Task Description</label>
+                            <textarea name="task-desc" id="task-desc-form" placeholder="Description"></textarea>
+                        </div>
+                        <div class="data-container-form">
                             <label for="date-form">Enter Date:</label>
                             <input type="date" id="date-form">
                             <label for="category-form"></label>
@@ -75,6 +69,10 @@
                                 <option value="Asparagus">Asparagus</option>
                             </select>
                         </div>
+                    </div>    
+                    <div class ="btn-container-form">
+                        <button id="add-thing">Add THING</button>
+                        <button>Cancel</button>
                     </div>
                 </form>
             </div>
