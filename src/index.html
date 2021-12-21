@@ -39,7 +39,7 @@
             <div id="list-title">Today's THINGS</div>
             <ul class="todoList"></ul>
             <div class="add-task-div">
-                <button id="add-task">
+                <button id="add-task" type = 'button'>
                     <span class="plus">
                         <svg width="13" height="13">
                             <path d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.0.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z" 
@@ -47,7 +47,7 @@
                             </path>
                         </svg></span>Add THING
                 </button>
-                <form >
+                <form id="form-todo">
                     <div class = "add-task-form">
                         <div class = "text-container-form">
                             <label for="form-title">Title</label>
@@ -64,11 +64,12 @@
                                 <option value="Bananas">Bananas</option>
                                 <option value="Asparagus">Asparagus</option>
                             </select>
+                            <input type="button" value = "Priority">
                         </div>
                     </div>    
                     <div class ="btn-container-form">
                         <button id="add-thing">Add THING</button>
-                        <button>Cancel</button>
+                        <button id="cancel-add-thing">Cancel</button>
                     </div>
                 </form>
             </div>

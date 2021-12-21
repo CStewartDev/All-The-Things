@@ -185,7 +185,6 @@ main {
     color: var(--black);
     display: flex;
     align-items: center;
-
 }
 
 .plus{
@@ -207,6 +206,10 @@ main {
     color: var(--white);
     background-color: var(--green);
     border-radius: 5px;
+}
+
+#form-todo {
+    visibility: hidden;
 }
 
 .add-task-form {
