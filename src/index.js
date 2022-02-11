@@ -42,6 +42,8 @@ if(localStorage.getItem('ALLTHETHINGS-TASK') == null){
     storageProjects.map(task=>todoList.appendChild(newTask(task)));
 }
 
+//Add Todo Toggle form
+
 const toggleForm = () => {
     if (formTodo.style.visibility === "visible") {
         formTodo.style.visibility = "hidden";

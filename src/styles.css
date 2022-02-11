@@ -91,11 +91,22 @@ aside {
 .category {
     padding: .25em .5em;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 .category:hover {
     background-color: var(--hover);
     border-radius: 10px;
+}
+
+.delete-cat {
+    visibility: hidden;
+}
+
+.category:hover .delete-cat {
+    visibility: visible;
+    color: var(--delete);
 }
 
 #add-category {
@@ -113,6 +124,7 @@ aside {
 #add-category:hover {
     background-color: var(--hover);
 }
+
 
 /* main */
 
@@ -141,6 +153,7 @@ main {
 }
 
 .task:hover .delete {
+    visibility: visible;
     color: var(--delete);
 }
 
@@ -162,6 +175,7 @@ main {
 }
 
 .delete {
+    visibility: hidden;
     color: var(--white);
 }
 
