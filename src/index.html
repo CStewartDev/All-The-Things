@@ -13,7 +13,7 @@
     <aside>
         <Section>
             <ul id= "Schedule">
-                <li>All Items</li>
+                <li>Inbox</li>
                 <li>Today<span id="Schedule-Sel"> *</span></li>
                 <li>Upcoming</li>
                 <li>Past Due</li>
@@ -59,10 +59,9 @@
                             <label for="date-form">Enter Date:</label>
                             <input type="date" id="date-form">
                             <label for="category-form"></label>
-                            <select id='category-form'>
-                                <option value=""  selected>---Categories---</option>
-                                <option value="Bananas">Bananas</option>
-                                <option value="Asparagus">Asparagus</option>
+                            <select id='category-form'> 
+                                <!-- Will need to inject data from db to this select for category options -->
+                                <option value=""  selected>---Categories---</option>>
                             </select>
                             <input type="button" value = "Priority">
                         </div>
