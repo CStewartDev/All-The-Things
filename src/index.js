@@ -1,8 +1,10 @@
 import './styles.css';
 import { renderFooter } from './DOM/footer.js';
-import { createTodo } from './todo';
+import { createTodo } from './LOGIC/todo';
 import { newTask } from './DOM/todoDOM';
 import { listCategory } from './DOM/categories';
+import { addTodo } from './LOGIC/addTodo';
+import { formCategory } from './DOM/CategoriesForm';
 
 
 
@@ -10,7 +12,11 @@ const todoList = document.querySelector('.todoList');
 const sideCategoryList = document.getElementById('categories-sidebar');
 const addTodoBtn = document.getElementById('add-task');
 const formTodo = document.getElementById('form-todo');
-const cancelAddTodo = document.getElementById('cancel-add-thing')
+const cancelAddTodo = document.getElementById('cancel-add-thing');
+const addThingBtn = document.querySelector('#add-thing');
+const categoryForm= document.querySelector('#category-form')
+
+formTodo.reset();
 
 //Linking in local storage
 
@@ -19,18 +25,26 @@ let storageProjects = [];
 
 //Categories
 if(localStorage.getItem('ALLTHETHINGS-CATEGORY') == null){
-    const defaultCategories = ["Welcome","Work"]
+    const defaultCategories = ["Inbox","Today","Upcoming","Past-Due","Welcome","Work"]
     localStorage.setItem('ALLTHETHINGS-CATEGORY', JSON.stringify(defaultCategories));
-    defaultCategories.map(category=>sideCategoryList.appendChild(listCategory(category)));
+    defaultCategories.slice(4)
+                     .map(category=>{
+                         sideCategoryList.appendChild(listCategory(category))
+                         categoryForm.appendChild(formCategory(category))
+                     })
 } else {
     storageCats = JSON.parse(window.localStorage.getItem('ALLTHETHINGS-CATEGORY'));
-    storageCats.map(category=>sideCategoryList.appendChild(listCategory(category)));
+    storageCats.slice(4)
+                .map(category=>{
+                    sideCategoryList.appendChild(listCategory(category))
+                    categoryForm.appendChild(formCategory(category))
+                });
 }
 
 //Tasks
 if(localStorage.getItem('ALLTHETHINGS-TASK') == null){
     const defaultTasks = [
-        createTodo('Enter your Things title and desc test',"No need to add this unless you cant to",false,"",""),
+        createTodo('Enter your Things',"No need to add this unless you cant to",false,"",""),
         createTodo('This one has Priority flagged',"",true,"",""),
         createTodo('Just a Date here!',"",false,"12/12/22",""),
         createTodo('Category Test',"",false,"","Welcome"),
@@ -42,7 +56,7 @@ if(localStorage.getItem('ALLTHETHINGS-TASK') == null){
     storageProjects.map(task=>todoList.appendChild(newTask(task)));
 }
 
-//Add Todo Toggle form
+//Add Todo Toggle
 
 const toggleForm = () => {
     if (formTodo.style.visibility === "visible") {
@@ -61,6 +75,14 @@ addTodoBtn.addEventListener('click', e=> {
 
 cancelAddTodo.addEventListener('click', e=> {
     e.preventDefault();
+    addTodoBtn.style.visibility = "visible"
+    toggleForm();
+    formTodo.reset();
+})
+
+addThingBtn.addEventListener('click', e=>{
+    e.preventDefault();
+    todoList.appendChild(newTask(addTodo()));
     addTodoBtn.style.visibility = "visible"
     toggleForm();
     formTodo.reset();
