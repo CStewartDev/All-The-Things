@@ -1,4 +1,4 @@
-import { createHtmlElement } from '../createHTMLElement';
+import { createHtmlElement } from '../LOGIC/createHTMLElement';
 
 
 const listCategory = (cat) => {
