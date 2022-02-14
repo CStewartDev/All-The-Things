@@ -69,13 +69,13 @@ const toggleForm = () => {
 }
 
 addTodoBtn.addEventListener('click', e=> {
-    e.target.style.visibility = 'hidden';
+    addTodoBtn.style.visibility = 'hidden';
     toggleForm();
 })
 
 cancelAddTodo.addEventListener('click', e=> {
     e.preventDefault();
-    addTodoBtn.style.visibility = "visible"
+    addTodoBtn.style.visibility = "visible";
     toggleForm();
     formTodo.reset();
 })
@@ -87,18 +87,5 @@ addThingBtn.addEventListener('click', e=>{
     toggleForm();
     formTodo.reset();
 })
-
-
-
-
-// let test = document.querySelectorAll('.task');
-// test.forEach(t=> {
-//     t.addEventListener('click',e=> {
-//         if(e.target.className.includes("task")) {
-//             console.log(e.target)
-//         }
-//     })
-// })
-
 
 document.body.appendChild(renderFooter());
