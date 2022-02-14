@@ -11,7 +11,6 @@ const addTodo = () => {
     projects = JSON.parse(window.localStorage.getItem('ALLTHETHINGS-TASK'));
     let addedTodo = projects.concat(newTodo);
     localStorage.setItem('ALLTHETHINGS-TASK',JSON.stringify(addedTodo));
-    console.log(newTodo)
     return newTodo
 }
 
