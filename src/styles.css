@@ -21,6 +21,7 @@ html{
     --priority: #7a0c00;
     --delete:red;
     --hover:#adaead;
+    --desc-text:#6d6d6d;
 }
 
 body {
@@ -131,7 +132,7 @@ aside {
 main {
     grid-area: main;
     background-color: var(--white);
-    padding: 2.5em 4em 1em 2.5em;
+    padding: 2.5em 2em 1em 2.0em;
     max-width: 1600px;
 }
 
@@ -141,12 +142,10 @@ main {
     padding-bottom: 1em;
 }
 
-
 .task{
     display: flex;
     justify-content: space-between;
     padding-left: .5em;
-    font-size: 1.25em;
     border-bottom: 1px solid var(--offwhite);
     color: var(--black);
     cursor: pointer;
@@ -163,11 +162,37 @@ main {
 }
 
 .task-title {
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.task-desc {
+    font-weight:500;
+    font-size: 1.15em;
+    color: var(--desc-text)
+}
+
+.due-date {
+    color:var(--dark-green)
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+}
+
+.done-dot {
+    width: 1em;
+    height: 1em;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: .5em;
+    margin-right: 1em;
 }
 
 .task-right{
     display: flex;
+    align-items: center;
 }
 
 .task-right div {

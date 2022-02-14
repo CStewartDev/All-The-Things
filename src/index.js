@@ -44,7 +44,7 @@ if(localStorage.getItem('ALLTHETHINGS-CATEGORY') == null){
 //Tasks
 if(localStorage.getItem('ALLTHETHINGS-TASK') == null){
     const defaultTasks = [
-        createTodo('Enter your Things',"No need to add this unless you cant to",false,"",""),
+        createTodo('Enter your Things',"No need to add this unless you want to",false,"",""),
         createTodo('This one has Priority flagged',"",true,"",""),
         createTodo('Just a Date here!',"",false,"12/12/22",""),
         createTodo('Category Test',"",false,"","Welcome"),
