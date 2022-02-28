@@ -1,6 +1,8 @@
 import { createHtmlElement } from '../LOGIC/createHTMLElement';
 import { deleteTodo } from '../LOGIC/deleteTodo';
 
+const dotChecked = () => "boop";
+
 
 const newTask = (todo) => {
 
@@ -20,6 +22,9 @@ taskDelete.addEventListener("click",()=>{
     deleteTodo(task.dataset.key)    
     task.remove();
 })
+
+doneDot.addEventListener('click',dotChecked)
+
 taskDiv.append(taskTitle,taskDesc,taskDue)
 taskLeft.append(doneDot,taskDiv);
 taskRight.append(taskDelete)

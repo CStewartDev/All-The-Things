@@ -190,6 +190,13 @@ main {
     margin-right: 1em;
 }
 
+.checked {
+    background-color: var(--green);
+    background-image: url(images/CheckMark.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+}
+
 .task-right{
     display: flex;
     align-items: center;
